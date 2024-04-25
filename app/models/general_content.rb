@@ -1,0 +1,2 @@
+class GeneralContent < ApplicationRecord
+end
