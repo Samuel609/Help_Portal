@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe GeneralContent, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  attributes = [
+    {title: %i[presence]},
+    {description: %i[presence]},
+    {categories: [:presence, {inclusion: [[:in_array, GeneralContent::GROUP]]}]}
+  ]
+  include_examples('model_shared_spec', :general_content, attributes)
+
 end

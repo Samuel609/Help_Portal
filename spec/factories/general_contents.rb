@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :general_content do
-    title { "MyString" }
-    categories { "MyString" }
-    description { "MyString" }
+    title { Faker::Lorem.sentence }
+    description { Faker::Lorem.paragraph }
+    categories { GeneralContent::SETUP }
   end
 end
